@@ -14,13 +14,24 @@ print("Input the list with with a maximum of", total_elements, "elements all bet
 #Going to take the list input 
 while i < N:
     element = int(input("Input element that is less than N: "))
-    if element <= N:
+    if (element <= N) and (element not in my_List):
         my_List.append(element)
         print("pass")
         i = i+1
     else:
         print("Element not accepted please retry.")
 
-print(my_List)
+#Sorts the elements in the list from smallest to largest
+sorted_list = my_List.sort(reverse=False)
+
+#Logic to find missing element
+list_sum = N * (N + 1) // 2 #Takes sum of list with N elements
+actual_sum = sum(my_List)
+
+missing_num = int(list_sum - actual_sum)
+
+print("The missing number in the list is :", missing_num)
+
+
 
    
