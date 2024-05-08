@@ -4,6 +4,7 @@
 # For example, N = 5 input: [1, 2, 5, 4], output: 3
 # HINT: N is the highest index + 1!!!!!
 
+#define variables
 i = 1
 my_List = []
 
